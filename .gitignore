@@ -7,3 +7,12 @@ _site
 *draft
 
 *n.n
+
+# Security - prevent accidental credential commits
+.env
+.env.*
+*.pem
+*.key
+*.p12
+credentials.json
+secrets.yml

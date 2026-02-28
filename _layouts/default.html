@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en"{% if page.page_class %} class="{{ page.page_class }}"{% endif %}>
   {% include head.html %}
 
   <body>
@@ -12,7 +12,7 @@
     </div>
 
     {% include footer.html %}
-    
+
     {% include foot.html %}
   </body>
 </html>

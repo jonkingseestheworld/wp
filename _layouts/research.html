@@ -1,54 +1,29 @@
-<!DOCTYPE html>
-<html class="page-work">
-  {% include head.html %}
+---
+layout: default
+---
+<div class="work">
 
+  <div id="brainstill" style="text-align: center;">
+    <img src="{{ 'assets/img/brainstill.png' | absolute_url }}" width="725" height="310"  style="padding:0; border:0;  margin: 10px auto;" />
+  </div>
 
-  <body>
-    {% include header.html %}
+  <p style="padding-top:10px;">Feel free to move around my brain (if you are visiting this page on a laptop browser) - it may tell you something more about me :D.</p>
+  <br />
 
+  <div class="work_section">
+    <h1 class="page-heading">{{ page.sub_title1 }}</h1>
+    {{ content }}
+  </div>
 
-    <div class="page-content">
-      <div class="wrapper">
-        <div class="work">
+  <div class="work_section">
+    {% include publications.html %}
+    <!-- -  {% include presentations.html %} - -->
+  </div>
 
-          <div id="brainstill" style="text-align: center;">
-            <img src="{{ 'assets/img/brainstill.png' | absolute_url }}" width="725" height="310"  style="padding:0; border:0;  margin: 10px auto;" />    <!-- width=850px height=360px -->
-          </div>
-        
-            <p style="padding-top:10px;">  Feel free to move around my brain (if you are visiting this page on a laptop browser) - it may tell you something more about me :D. </p>
-            <br />
-            
+  <!--- <div class="work_section">
+    {% include honours.html %}
+  </div>   --->
 
+</div>
 
-          <div class="work_section"> 
-            <h1 class="page-heading">{{ page.sub_title1 }}</h1>
-            {{ content }}
-          </div>
-
-
-          <div class="work_section"> 
-
-            {% include publications.html %}
-
-          <!-- -  {% include presentations.html %} - -->
-          </div>
-          
-          <!--- <div class="work_section"> 
-
-            {% include honours.html %}
-          </div>   --->
-
-
-        </div>
-      </div>
-    </div>
-
-
-    {% include footer.html %}
-    {% include foot.html %}
-
-    <script type="text/javascript" async defer src="{{ 'assets/js/brain_explore.js' | absolute_url }}"></script> 
-
-
-  </body>
-</html>
+<script type="text/javascript" async defer src="{{ 'assets/js/brain_explore.js' | absolute_url }}"></script>

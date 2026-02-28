@@ -2,6 +2,7 @@
 layout: gallery
 title: GALLERY
 slug: /gallery
+page_class: page-projects
 items:
 
   - image:

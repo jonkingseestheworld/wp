@@ -1,3 +1,29 @@
+/* Typewriter effect */
+.typewriter-container {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.welcome-typewriter {
+  display: block;
+  text-align: center;
+  color: $nav-green-color;
+  font-family: $base-font-family;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.tw-cursor {
+  color: $nav-green-color;
+  animation: tw-blink 0.7s step-end infinite;
+}
+
+@keyframes tw-blink {
+  50% { opacity: 0; }
+}
+
+
 .profilepic {
  
   float: left; 
@@ -27,7 +53,7 @@
 }
 
 .hm_tt_2 {
-  margin-bottom: $spacing-unit / 2;
+  margin-bottom: calc(#{$spacing-unit} / 2);
 }
 
 .social-links {
@@ -63,6 +89,21 @@
 
 
 
+
+
+/* Utility classes */
+.link-underline {
+  text-decoration: underline;
+}
+
+.link-label {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.site-title-name {
+  font-weight: bold;
+}
 
 
 #wechat-widget {
