@@ -104,7 +104,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+#typewriter-text {
   font-weight: 300;
   font-family: "Futura", sans-serif;
 }
@@ -232,6 +233,23 @@ pre {
 
 /*dark-mode: */
 .dark-mode body {background: $dark-green-color; color: #FFFFFF;}
+
+.dark-mode a {
+  color: #F2DDCC;
+
+  &:hover {
+    color: $dark-main-orange-color;
+  }
+}
+
+.dark-mode .home_title {
+  color: $dark-main-orange-color;
+}
+
+.dark-mode .welcome-typewriter,
+.dark-mode .tw-cursor {
+  color: #FFFFFF;
+}
 
 
 

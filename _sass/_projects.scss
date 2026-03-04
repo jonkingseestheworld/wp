@@ -51,3 +51,8 @@ table {border-collapse:separate;
 	line-height: 1.4;
 	margin: 0px;
 }
+
+
+.dark-mode .item-heading {
+  color: $dark-main-orange-color;
+}
