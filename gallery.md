@@ -4,7 +4,6 @@ title: GALLERY
 slug: /gallery
 page_class: page-projects
 items:
-
   - image:
       src: /assets/img/gallery/tt20230711wk28_global_temp.gif
       alt: GlobalTemp
@@ -24,7 +23,7 @@ items:
   - image:
       src: /assets/img/gallery/tt20230704wk27_hist_markers.png
       alt: Historical_markers
-      
+
   - image:
       src: /assets/img/gallery/2_Line_jpn_airports.png
       alt: JPN_airport
@@ -66,9 +65,9 @@ items:
       alt: Bham_OSM
 ---
 
-Collection of my selected data viz works.
+<i>Data visualisation is an essential part of the data exploration process and enables effective communication of results.</i>
+<br>
+For my recent work examples (work in progress) using D3, SVG and JavaScript, please have a look [here](https://d3-viz.kinglau.info/){:target="\_blank"}
 <br>
 <br>
-<i>Data visualisation is an essential part of the data exploratoration process and enable effective communication of results.</i> The works here are primarily created with R, but I also have experience of using Python, Matlab, and Quicksight for data visualisation.
-<br>
-<br>
+The previous works below are primarily created with R packages.
