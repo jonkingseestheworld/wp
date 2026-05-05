@@ -1,30 +1,46 @@
-<!DOCTYPE html>
-<html class="page-home">
-  {% include head.html %}
+---
+layout: default
+---
+<h2 class="home_title hm_tt_1">JOHNNY KING LAU, PhD</h2>
+<div class="typewriter-container">
+  <h3 class="welcome-typewriter"><span id="typewriter-text"></span><span class="tw-cursor">_</span></h1>
+</div>
+<br>
+<!-- <h2 class="home_title hm_tt_2">  </h2> -->
 
-  <body>
-    {% include header.html %}
+<div class="home">
+  <img
+    src="{{ page.profile_picture.src | absolute_url }}"
+    alt="{{ page.profile_picture.alt }}"
+    class="profilepic"
+  />
 
-    <div class="page-content">
-      <div class="wrapper">
-        <h2 class="home_title hm_tt_1"> RESEARCH &amp; DATA SCIENTIST, PhD </h2>
-        <br>
-        <!-- <h2 class="home_title hm_tt_2">  </h2> -->
+  {{ content }}
+</div>
 
-        <div class="home">
-          <img 
-            src="{{ page.profile_picture.src | absolute_url }}"
-            alt="{{ page.profile_picture.alt }}"
-            class="profilepic"
-          />
+<script> 
+(function() {
+  var texts = ['Data-driven insights', 'Healthcare Analytics', 'AI-enhanced efficiency'];
+  var el = document.getElementById('typewriter-text');
+  if (!el) return;
+  var textIndex = 0, charIndex = 0, isDeleting = false;
 
-          {{ content }}
-        </div>
-      </div>
-    </div>
+  function tick() {
+    var current = texts[textIndex];
+    el.textContent = isDeleting ? current.slice(0, charIndex--) : current.slice(0, charIndex++);
+    var delay = isDeleting ? 60 : 100;
+    if (!isDeleting && charIndex > current.length) {
+      isDeleting = true;
+      delay = 1500;
+    } else if (isDeleting && charIndex < 0) {
+      isDeleting = false;
+      textIndex = (textIndex + 1) % texts.length;
+      charIndex = 0;
+      delay = 400;
+    }
+    setTimeout(tick, delay);
+  }
 
-    {% include footer.html %}
-
-    {% include foot.html %}
-  </body>
-</html>
+  setTimeout(tick, 600);
+})();
+</script>

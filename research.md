@@ -2,9 +2,8 @@
 layout: research
 title: ""
 slug: /research
+page_class: page-work
 sub_title1: My Research Interest and Experience
-
-
 ---
 
 

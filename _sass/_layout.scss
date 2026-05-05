@@ -26,12 +26,13 @@
 }
 
 .toggle_icon {
-  font-size: 20px; 
+  font-size: 20px;
   padding-right: 5px;
-  margin-top: 5px; 
-  
+  margin-top: 5px;
+  color: $nav-green-color;
+
   &:hover {
-    color: $dark-main-orange-color;
+    color: #424242;
   }
 }
 
@@ -46,12 +47,12 @@
 
   &,
   &:visited {
-    color: $grey-color-dark; 
+    color: $nav-green-color;
   };
 
-  /** added by jkl */                    
+  /** added by jkl */
   &:hover {
-    color: $text-hover-color;
+    color: #424242;
   }
 
 }
@@ -62,6 +63,7 @@
   height: 28px;
   padding-left: 10px;
   margin-top: -5px;
+  filter: brightness(0) saturate(100%) invert(33%) sepia(60%) saturate(700%) hue-rotate(148deg) brightness(85%);
 }
 
 
@@ -86,7 +88,7 @@
 
   .page-link {
     font-size: 17px;
-    color: $main-green-color;
+    color: $nav-green-color;
     line-height: $base-line-height;
     padding: 5px;
     padding-bottom:10px;
@@ -98,7 +100,7 @@
     };
 
     &:hover {
-    color: $text-hover-color;
+    color: #424242;
     background-color: #ddd;
     };
   }
@@ -158,8 +160,8 @@
  */
 .site-footer {
   border-top: 1px solid $grey-color;
-  padding-top: $spacing-unit /2;
-  padding-bottom: $spacing-unit /2;
+  padding-top: calc(#{$spacing-unit} / 2);
+  padding-bottom: calc(#{$spacing-unit} / 2);
   text-align: right;
 
   @include media-query($on-mobile) {
@@ -175,7 +177,7 @@
   float: left;
   text-decoration: none;
   font-size: 14px;
-  color: $grey-color-dark;
+  color: $nav-green-color;
   padding-top: 5px;
   font-weight: bold;
 }
@@ -186,11 +188,11 @@
 }
 
 .social-links a i {
-  font-size: 25px; padding: 0px 10px; 
-  color:$grey-color-dark;
+  font-size: 25px; padding: 0px 10px;
+  color: $nav-green-color;
 
   &:hover {
-    color: $text-hover-color;
+    color: #424242;
     };
 }
 

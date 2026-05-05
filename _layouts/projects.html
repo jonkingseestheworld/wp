@@ -1,48 +1,30 @@
-<!DOCTYPE html>
-<html class="page-projects">
-  {% include head.html %}
+---
+layout: default
+---
+<h2 class="page_heading_title">{{ page.title }}</h2>
 
-  <body>
-    {% include header.html %}
+<div class="projects">
+  {{ content }}
 
-    <div class="page-content">
-      <div class="wrapper">
-        <h2 class="page_heading_title"> {{ page.title }} </h2>
-        
-        <div class="projects">
-    
-          {{ content }}
+  <table class="projects-item">
+  {% for item in page.items %}
+    <tr>
+      <td class="list-group-image">
+        <img src="{{ item.image.src | absolute_url }}"
+        alt="{{ item.image.alt }}"
+        class="projects-bubble">
+      </td>
 
-          <table class="projects-item">
-          {% for item in page.items %}
-            <tr>
-              <td class="list-group-image">
-                <img src="{{ item.image.src | absolute_url }}" 
-                alt="{{ item.image.alt }}" 
-                class="projects-bubble">
-              </td>
+      <td class="list-group-item">
+        <p class="item-heading">{{ item.title }}</p>
+        <p class="item-text">{{ item.description }}
+          <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer" class="link-underline">{{ item.link_info }}</a></p>
 
-
-              <td class="list-group-item">
-                <p class="item-heading">
-              {{ item.title }} </p>
-                <p class="item-text"> {{ item.description }} 
-                  <a href="{{ item.link }}" target="_blank" style="text-decoration: underline;">{{ item.link_info }}</a></p>
-
-                {% if item.link_info2 != "" %}
-                <p> <a href="{{ item.link2 }}" target="_blank" style="text-decoration: underline;">{{ item.link_info2 }}</a></p>
-              </td>
-            </tr>
-              {% endif %}
-          {% endfor %}
-
-          </table>
-        </div>
-      </div>
-    </div>
-
-    {% include footer.html %}
-
-    {% include foot.html %}
-  </body>
-</html>
+        {% if item.link_info2 != "" %}
+        <p><a href="{{ item.link2 }}" target="_blank" rel="noopener noreferrer" class="link-underline">{{ item.link_info2 }}</a></p>
+        {% endif %}
+      </td>
+    </tr>
+  {% endfor %}
+  </table>
+</div>

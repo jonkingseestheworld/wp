@@ -1,63 +1,33 @@
-<!DOCTYPE html>
-<html class="page-projects">
-  {% include head.html %}
+---
+layout: default
+---
+<h2 class="page_heading_title">{{ page.title }}</h2>
 
+{{ content }}
 
-  <body>
-
-    {% include header.html %}
-
-    <div class="page-content">
-      <div class="wrapper">
-        <h2 class="page_heading_title"> {{ page.title }} </h2>
-
-          {{ content }}
-
-          <div class="grid">
-
-            {% for item in page.items %}
-              <div class="grid-item grid-item--width2">
-                <a data-fslightbox="gallery" href="{{ item.image.src | absolute_url }}">
-                  <img src="{{ item.image.src | absolute_url }}" alt="{{ item.image.alt }}" >
-                </a>
-              </div>
-
-            {% endfor %}
-
-          </div>
-      </div>
+<div class="grid">
+  {% for item in page.items %}
+    <div class="grid-item grid-item--width2">
+      <a data-fslightbox="gallery" href="{{ item.image.src | absolute_url }}">
+        <img src="{{ item.image.src | absolute_url }}" alt="{{ item.image.alt }}">
+      </a>
     </div>
+  {% endfor %}
+</div>
 
-    <script src="assets/js/jquery-3.6.4.min.js"></script>
-    <script src="assets/js/masonry.pkgd.min.js"></script>
-    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+<script src="{{ 'assets/js/jquery-3.6.4.min.js' | absolute_url }}"></script>
+<script src="{{ 'assets/js/masonry.pkgd.min.js' | absolute_url }}"></script>
+<script src="{{ 'assets/js/imagesloaded.pkgd.min.js' | absolute_url }}"></script>
 
-    <script type="text/javascript"> 
-        // init Masonry
-        /* var $grid = $('.grid').masonry({
-          "itemSelector": ".grid-item", 
-          "columnWidth": 168, 
-          "gutter": 5 
-        });
-        // layout Masonry after each image loads
-        $grid.imagesLoaded().progress( function() {
-          $grid.masonry('layout');
-        });  */
+<script type="text/javascript">
+   var $grid = $('.grid').imagesLoaded( function() {
+     // init Masonry after all images have loaded
+     $grid.masonry({
+       "itemSelector": ".grid-item",
+       "columnWidth": 168,
+       "gutter": 5
+     });
+   });
+</script>
 
-       var $grid = $('.grid').imagesLoaded( function() {
-         // init Masonry after all images have loaded
-         $grid.masonry({
-           "itemSelector": ".grid-item", 
-           "columnWidth": 168, 
-           "gutter": 5            
-         });
-       });      
-    </script>
-
-    <script src="assets/js/fslightbox.js"></script>
-
-    {% include footer.html %}
-
-    {% include foot.html %}
-  </body>
-</html>
+<script src="{{ 'assets/js/fslightbox.js' | absolute_url }}"></script>

@@ -58,7 +58,7 @@ ol,
 dl,
 figure,
 %vertical-rhythm {
-  margin-bottom: $spacing-unit / 2;
+  margin-bottom: calc(#{$spacing-unit} / 2);
 }
 
 /**
@@ -104,7 +104,8 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+#typewriter-text {
   font-weight: 300;
   font-family: "Futura", sans-serif;
 }
@@ -125,7 +126,7 @@ a {
   // }
 
   &:hover {
-    color: $text-hover-color;
+    color: $nav-green-color;
     /* text-decoration: underline;  */
   }
 }
@@ -136,7 +137,7 @@ a {
 blockquote {
   color: $grey-color;
   border-left: 4px solid $grey-color-light;
-  padding-left: $spacing-unit / 2;
+  padding-left: calc(#{$spacing-unit} / 2);
   font-size: 100%;
   letter-spacing: -0.5px;
   font-style: italic;
@@ -187,8 +188,8 @@ pre {
   @include media-query($on-laptop) {
     max-width: -webkit-calc(800px - (#{$spacing-unit}));
     max-width:         calc(800px - (#{$spacing-unit}));
-    padding-right: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
+    padding-right: calc(#{$spacing-unit} / 2);
+    padding-left: calc(#{$spacing-unit} / 2);
   }
 
   position: relative;
@@ -231,36 +232,66 @@ pre {
 
 
 /*dark-mode: */
-.dark-mode body {background: $dark-green-color; color: $white-color;} 
+.dark-mode body {background: $dark-green-color; color: #FFFFFF;}
 
+.dark-mode a {
+  color: #F2DDCC;
 
-.dark-mode img.king-charact {filter: invert(1);}
+  &:hover {
+    color: $dark-main-orange-color;
+  }
+}
 
-.dark-mode .site-nav a {
+.dark-mode .home_title {
   color: $dark-main-orange-color;
 }
 
-.dark-mode .toggle_icon {
+.dark-mode .welcome-typewriter,
+.dark-mode .tw-cursor {
+  color: #FFFFFF;
+}
+
+
+
+.dark-mode img.king-charact {filter: brightness(0) saturate(100%) invert(76%) sepia(30%) saturate(596%) hue-rotate(316deg) brightness(102%);}
+
+.dark-mode .site-nav a {
+  color: $dark-main-orange-color;
+
   &:hover {
-      color: $main-green-color;
+    color: #F2DDCC;
+  }
+}
+
+.dark-mode a.toggle_icon {
+  color: $dark-main-orange-color;
+  &:hover {
+      color: #F2DDCC;
     }
 }
 
 
 .dark-mode .site-nav-right a:hover {
   background-color: #293127;
-  color: $dark-main-orange-color;
+  color: #F2DDCC;
 }
 
-.dark-mode a.site-title,
-.dark-mode .social-links a i {
-  color: #FFFFFF;
+.dark-mode a.site-title {
+  color: $dark-main-orange-color;
 
   &:hover {
-   color: $dark-main-orange-color;
+   color: #F2DDCC;
+  }
+}
+
+.dark-mode .social-links a i {
+  color: $dark-main-orange-color;
+
+  &:hover {
+   color: #F2DDCC;
   }
 }
 
 .dark-mode .powered-by p {
-  color: #FFFFFF;
+  color: $dark-main-orange-color;
 }

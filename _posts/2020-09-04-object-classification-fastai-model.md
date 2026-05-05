@@ -2,6 +2,7 @@
 layout: post
 title:  "My First Object Classification Model: That Ocean Trash Identifier"
 date:   2020-09-04 10:00:40
+page_class: page-blog
 blurb: "A look at an example of object classification model."
 og_image: /assets/img/content/post-example/Banner.jpg
 ---
@@ -27,7 +28,7 @@ Here are the outcomes:
 
 <img src="{{ "/assets/img/content/post-2020/outcomes.JPG" | absolute_url }}" alt="classified" style="height: 220px;">
 
-<a href="https://mybinder.org/v2/gh/jonkingseestheworld/plastic_identifier_voila/master?urlpath=voila%2Frender%2Fplastic_identifier_voila2.ipynb" target="_blank" style="text-decoration: underline;"> "That Ocean Trash Identifier!"</a> -- Give it a try yourself?
+<a href="https://mybinder.org/v2/gh/jonkingseestheworld/plastic_identifier_voila/master?urlpath=voila%2Frender%2Fplastic_identifier_voila2.ipynb" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;"> "That Ocean Trash Identifier!"</a> -- Give it a try yourself?
 
 (Note: The app runs on Binder - a free service that provides hardware and software to run your codes online. It may take a bit of time to load the app when you first visit the page.)
 
@@ -43,15 +44,15 @@ Remember this video? When the current President of the United States of America 
 
 Simply for fun, I have also built a classifier for identifying Woman, Man, Camera, TV.
 
-(Kudos to JiangHong who came up with this idea originally -- such a genius! I cracked up so much when I first came across <a href="https://juejin.im/post/6865609905508876296" target="_blank" style="text-decoration: underline;">this post</a>.)
+(Kudos to JiangHong who came up with this idea originally -- such a genius! I cracked up so much when I first came across <a href="https://juejin.im/post/6865609905508876296" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">this post</a>.)
 
-And here is my attempt: <a href="https://mybinder.org/v2/gh/jonkingseestheworld/WMCTV_voila/master?urlpath=voila%2Frender%2Fwoman_man_camera_tv_voila.ipynb" target="_blank" style="text-decoration: underline;"> "A Woman-Man-Camera-TV Identifier"</a>!
+And here is my attempt: <a href="https://mybinder.org/v2/gh/jonkingseestheworld/WMCTV_voila/master?urlpath=voila%2Frender%2Fwoman_man_camera_tv_voila.ipynb" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;"> "A Woman-Man-Camera-TV Identifier"</a>!
 
 <br />
 
 #### <i> My Thoughts, so far </i>
 
-Overall, <a href="https://github.com/fastai/fastai" target="_blank" style="text-decoration: underline;">FastAI</a> library is very user friendly. It is easy to use and understand.
+Overall, <a href="https://github.com/fastai/fastai" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">FastAI</a> library is very user friendly. It is easy to use and understand.
 
 I always thought you needed loads of data to train a good model. FastAI shows that it is not necessarily the case. Given the access to the endless amount of images online, I only needed less than 150 pictures for each object type (plastic bag / jelly fish) at the end  to get an almost-perfect classifier. 
 
@@ -73,6 +74,6 @@ Deep Learning is not everything. It certainly has limitations.
 
 <br />
 ##### FOOTNOTES
-[^1]: <a href="https://course.fast.ai/" target="_blank" style="text-decoration: underline;"> FastAI course 2020</a>
+[^1]: <a href="https://course.fast.ai/" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;"> FastAI course 2020</a>
 
-[^2]: <a name="ref2" href="https://ethics.fast.ai/" target="_blank" style="text-decoration: underline;">Practical Data Ethics, FastAI</a>
+[^2]: <a name="ref2" href="https://ethics.fast.ai/" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">Practical Data Ethics, FastAI</a>

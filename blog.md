@@ -2,6 +2,7 @@
 layout: blog
 title: The Posts
 slug: /blog
+page_class: page-blog
 items:
   - title: Using GeoSpatial Data Analytics - A Friendly Guide to Folium and Rasterio
     date: 2021/07/08
