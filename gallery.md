@@ -67,7 +67,7 @@ items:
 
 <i>Data visualisation is an essential part of the data exploration process and enables effective communication of results.</i>
 <br>
-For my recent work examples (work in progress) using D3, SVG and JavaScript, please have a look [here](https://d3-viz.kinglau.info/){:target="\_blank"}
+For my recent work examples (work in progress) using D3, SVG and JavaScript, please have a look <a href="https://d3-viz.kinglau.info/" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">here</a>
 <br>
 <br>
 The previous works below are primarily created with R packages.
