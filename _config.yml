@@ -22,6 +22,9 @@ header:
       inmenu: true
     - name: RESEARCH
       inmenu: false
+    - name: DESIGN SYSTEM
+      slug: /design-system
+      inmenu: false
 
 footer:
   show_copyright: True

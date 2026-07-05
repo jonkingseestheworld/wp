@@ -24,14 +24,5 @@
 
 .sub-title {
   font-size: 15px;
-}
-
-
-
-
-.dark-mode .blog-post-list,
-.dark-mode .media-post-list {
-  .blog-post-date {
-    color: #FFFFFF;
-    }
+  color: var(--color-secondary);
 }

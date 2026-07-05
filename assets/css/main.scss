@@ -14,22 +14,73 @@ $base-line-height: 1.7;
 
 $spacing-unit: 30px;
 
-$text-color: #111;
-$nav-green-color: #02786e;
-$background-color: #fdfdfd;
-$brand-color: #2a7ae2;
+// -----------------------------------------------------------------------------
+// Design tokens
+//
+// The palette below (deep teal, sage, pale sage, cream, peach, terracotta) is
+// the single source of truth for the site's colour scheme. Every other colour
+// variable is a semantic alias onto a CSS custom property so that switching
+// `.dark-mode` on the <html> element re-themes the whole cascade at once,
+// instead of needing a `.dark-mode .selector { ... }` override per component.
+// -----------------------------------------------------------------------------
+:root {
+  --palette-deep-teal: #276359;
+  --palette-sage: #8EBBA7;
+  --palette-pale-sage: #B9CDCB;
+  --palette-cream: #F2DDCC;
+  --palette-peach: #FCAC89;
+  --palette-terracotta: #E38150;
 
-$main-green-color: #4e9985; 
-$light-green-color: #32a197;
-$dark-green-color: #1b2925;
+  // Light mode (default)
+  --color-bg: #fdfdfd;
+  --color-surface: var(--palette-cream);
+  --color-text: #1b2925;
+  --color-text-muted: #4e4e4e;
+  --color-heading: var(--palette-deep-teal);
+  --color-link: var(--palette-deep-teal);
+  --color-link-hover: var(--palette-terracotta);
+  --color-nav: var(--palette-deep-teal);
+  --color-nav-hover: #424242;
+  --color-nav-hover-bg: #dddddd;
+  --color-secondary: #4f7566;
+  --color-accent: var(--palette-terracotta);
+  --color-accent-soft: var(--palette-peach);
+  --color-border: var(--palette-pale-sage);
+  --color-white: #ffffff;
+  --color-grey: #828282;
+  --color-grey-light: #bfbfbf;
+}
 
-$dark-main-orange-color: #FCAC89;
+.dark-mode {
+  --color-bg: #1b2925;
+  --color-surface: var(--palette-deep-teal);
+  --color-text: #ffffff;
+  --color-text-muted: #ffffff;
+  --color-heading: var(--palette-peach);
+  --color-link: var(--palette-cream);
+  --color-link-hover: var(--palette-peach);
+  --color-nav: var(--palette-peach);
+  --color-nav-hover: var(--palette-cream);
+  --color-nav-hover-bg: #293127;
+  --color-secondary: var(--palette-sage);
+  --color-accent: var(--palette-terracotta);
+  --color-accent-soft: var(--palette-peach);
+  --color-border: #345048;
+}
 
-$white-color: #FFFFFF;
+$text-color: var(--color-text);
+$nav-green-color: var(--color-nav);
+$background-color: var(--color-bg);
 
-$grey-color: #828282;
-$grey-color-light: #bfbfbf;
-$grey-color-dark: darken($grey-color, 25%);
+$main-green-color: var(--color-heading);
+$light-green-color: var(--color-link);
+$dark-main-orange-color: var(--color-heading);
+
+$white-color: var(--color-white);
+
+$grey-color: var(--color-grey);
+$grey-color-light: var(--color-grey-light);
+$grey-color-dark: var(--color-text-muted);
 
 $on-mobile: 500px;
 $on-laptop: 800px;
@@ -41,4 +92,4 @@ $on-laptop: 800px;
 }
 
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import "base", "layout", "site", "work", "projects", "blog", "post", "404", "gallery";
+@import "base", "layout", "site", "work", "projects", "blog", "post", "404", "gallery", "design-system";
