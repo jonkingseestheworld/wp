@@ -2,7 +2,7 @@
  * Site header
  */
 .site-header {
-  border-bottom: 1px solid $grey-color;
+  border-bottom: 1px solid var(--color-border);
   min-height: 56px;
 
   padding-top: 10px;
@@ -32,7 +32,7 @@
   color: $nav-green-color;
 
   &:hover {
-    color: #424242;
+    color: var(--color-nav-hover);
   }
 }
 
@@ -52,7 +52,7 @@
 
   /** added by jkl */
   &:hover {
-    color: #424242;
+    color: var(--color-nav-hover);
   }
 
 }
@@ -100,8 +100,8 @@
     };
 
     &:hover {
-    color: #424242;
-    background-color: #ddd;
+    color: var(--color-nav-hover);
+    background-color: var(--color-nav-hover-bg);
     };
   }
 
@@ -112,7 +112,7 @@
     top: 12px;
     right: 24px;
 
-    border: 1px solid $grey-color-light;
+    border: 1px solid var(--color-border);
     border-radius: 5px;
     text-align: right;
 
@@ -159,7 +159,7 @@
  * Site footer
  */
 .site-footer {
-  border-top: 1px solid $grey-color;
+  border-top: 1px solid var(--color-border);
   padding-top: calc(#{$spacing-unit} / 2);
   padding-bottom: calc(#{$spacing-unit} / 2);
   text-align: right;
@@ -192,7 +192,7 @@
   color: $nav-green-color;
 
   &:hover {
-    color: #424242;
+    color: var(--color-nav-hover);
     };
 }
 

@@ -120,13 +120,9 @@ h4 {
 a {
   color: $light-green-color;
   text-decoration: none;
-  //
-  // &:visited {
-  //   color: darken($brand-color, 15%);
-  // }
 
   &:hover {
-    color: $nav-green-color;
+    color: var(--color-link-hover);
     /* text-decoration: underline;  */
   }
 }
@@ -153,9 +149,9 @@ blockquote {
 pre,
 code {
   font-size: 15px;
-  border: 1px solid $grey-color-light;
+  border: 1px solid var(--color-border);
   border-radius: 3px;
-  background-color: #eef;
+  background-color: var(--color-surface);
 }
 
 code {
@@ -225,73 +221,17 @@ pre {
 
 .page_heading_title {
   text-align: center;
-  font-size: 20px; 
+  font-size: 20px;
   font-weight: bold;
   padding-bottom: 10px;
+  color: $main-green-color;
 }
 
-
-/*dark-mode: */
-.dark-mode body {background: $dark-green-color; color: #FFFFFF;}
-
-.dark-mode a {
-  color: #F2DDCC;
-
-  &:hover {
-    color: $dark-main-orange-color;
-  }
-}
-
-.dark-mode .home_title {
-  color: $dark-main-orange-color;
-}
-
-.dark-mode .welcome-typewriter,
-.dark-mode .tw-cursor {
-  color: #FFFFFF;
-}
-
-
-
+/**
+ * Dark mode is driven entirely by re-assigning the --color-* custom
+ * properties on .dark-mode (see assets/css/main.scss); components below
+ * reference those tokens so they re-theme automatically. Only styling that
+ * can't be expressed with a token (raster image recolouring) needs an
+ * explicit override here.
+ */
 .dark-mode img.king-charact {filter: brightness(0) saturate(100%) invert(76%) sepia(30%) saturate(596%) hue-rotate(316deg) brightness(102%);}
-
-.dark-mode .site-nav a {
-  color: $dark-main-orange-color;
-
-  &:hover {
-    color: #F2DDCC;
-  }
-}
-
-.dark-mode a.toggle_icon {
-  color: $dark-main-orange-color;
-  &:hover {
-      color: #F2DDCC;
-    }
-}
-
-
-.dark-mode .site-nav-right a:hover {
-  background-color: #293127;
-  color: #F2DDCC;
-}
-
-.dark-mode a.site-title {
-  color: $dark-main-orange-color;
-
-  &:hover {
-   color: #F2DDCC;
-  }
-}
-
-.dark-mode .social-links a i {
-  color: $dark-main-orange-color;
-
-  &:hover {
-   color: #F2DDCC;
-  }
-}
-
-.dark-mode .powered-by p {
-  color: $dark-main-orange-color;
-}
