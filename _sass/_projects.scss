@@ -38,7 +38,7 @@ table {border-collapse:separate;
 }
 
 .item-heading {
-	font-size: 24px;
+	font-size: var(--font-size-item-heading);
 	color: $main-green-color;
 	margin: 0px;
 	padding:0px 0px;

@@ -3,7 +3,7 @@
 
 title: Johnny Lau | HOME
 description: >- # this means to ignore newlines until "baseurl:"
-  Research & Data Scientist 
+  Research & Data Scientist
 #baseurl: "" # the subpath of the site
 url: "https://johnny.kinglau.info" # the base hostname & protocol for the site
 og_image: /assets/img/og_brain.png
@@ -11,18 +11,18 @@ og_image: /assets/img/og_brain.png
 
 header:
   pages:
-    - name: HOME
+    - name: home
       slug: /
       inmenu: true
-    - name: PROJECTS
+    - name: projects
       inmenu: true
-    - name: GALLERY
+    - name: gallery
       inmenu: true
-    - name: BLOG
+    - name: blog
       inmenu: true
-    - name: RESEARCH
+    - name: research
       inmenu: false
-    - name: DESIGN SYSTEM
+    - name: design system
       slug: /design-system
       inmenu: false
 
@@ -49,7 +49,7 @@ footer:
 # Build settings
 markdown: kramdown
 sass:
-    style: :compressed
+  style: :compressed
 plugins:
   - jekyll-feed
 

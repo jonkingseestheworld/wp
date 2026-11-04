@@ -59,7 +59,7 @@
 
 .ds-swatch-hex {
   display: block;
-  font-family: monospace;
+  font-family: var(--font-mono);
   opacity: 0.8;
 }
 
@@ -111,7 +111,7 @@
 }
 
 .ds-token-name {
-  font-family: monospace;
+  font-family: var(--font-mono);
 }
 
 /* Typography */
@@ -120,7 +120,7 @@
 }
 
 .ds-type-sample small {
-  font-family: monospace;
+  font-family: var(--font-mono);
   color: var(--color-text-muted);
   margin-left: 8px;
 }

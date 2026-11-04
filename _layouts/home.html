@@ -1,6 +1,19 @@
 ---
 layout: default
 ---
+<div id="particle-bg" aria-hidden="true"><canvas id="particle-canvas"></canvas></div>
+<style>
+  /* Particle background (assets/js/particles-bg.js). Kept inline so it always ships with this page. */
+  #particle-bg {
+    position: fixed; top: 5%; bottom: 2.5%; left: 0; width: 65%; /* width = how far across the page it reaches */
+    z-index: -1; pointer-events: none;
+    /* fade out towards the right edge; remove these two lines for a hard edge */
+    -webkit-mask-image: linear-gradient(to right, #000 40%, transparent);
+    mask-image: linear-gradient(to right, #000 40%, transparent);
+  }
+  /* no class on <html> (bg_mode.js overwrites html.className); the html background itself is set in _base.scss */
+  body { background-color: transparent; }
+</style>
 <h2 class="home_title hm_tt_1">JOHNNY KING LAU, PhD</h2>
 <div class="typewriter-container">
   <h3 class="welcome-typewriter"><span id="typewriter-text"></span><span class="tw-cursor">_</span></h1>
@@ -44,3 +57,4 @@ layout: default
   setTimeout(tick, 600);
 })();
 </script>
+<script src="{{ "/assets/js/particles-bg.js" | relative_url }}"></script>
