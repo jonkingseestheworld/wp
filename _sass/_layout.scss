@@ -2,7 +2,7 @@
  * Site header
  */
 .site-header {
-  border-bottom: 1px solid $grey-color;
+  /* border-bottom: 1px solid var(--color-border);   */
   min-height: 56px;
 
   padding-top: 10px;
@@ -22,17 +22,19 @@
 }
 
 .site-nav a {
-  float: left; padding: 10px;
+  float: left; padding: 5px;
 }
 
 .toggle_icon {
   font-size: 20px;
-  padding-right: 5px;
+  padding-right: 0px;
   margin-top: 5px;
+  margin-left: 0px;
+  margin-right: 0px;
   color: $nav-green-color;
 
   &:hover {
-    color: #424242;
+    color: var(--color-nav-hover);
   }
 }
 
@@ -41,9 +43,9 @@
 
 
 .site-title {
-  font-size: 24px;
+  font-size: var(--font-size-site-title);
   line-height: 45px;
-  letter-spacing: -1px;
+  /*letter-spacing: -1px; */
 
   &,
   &:visited {
@@ -52,7 +54,7 @@
 
   /** added by jkl */
   &:hover {
-    color: #424242;
+    color: var(--color-nav-hover);
   }
 
 }
@@ -60,7 +62,7 @@
 
 /** added by jkl */
 .king-charact {
-  height: 28px;
+  height: 20px;
   padding-left: 10px;
   margin-top: -5px;
   filter: brightness(0) saturate(100%) invert(33%) sepia(60%) saturate(700%) hue-rotate(148deg) brightness(85%);
@@ -81,27 +83,28 @@
   float: right;
 
   padding-top: 10px;
+  font-size: var(--font-size-nav);
 
   .menu-icon {
     display: none;
   }
 
   .page-link {
-    font-size: 17px;
+    /* font-size: var(--font-size-nav);    */
     color: $nav-green-color;
     line-height: $base-line-height;
     padding: 5px;
-    padding-bottom:10px;
-    border-radius: 5px;
+    padding-bottom:15px;
+    border-radius: var(--radius-sm);
 
     // Gaps between nav items, but not on the first one
     &:not(:first-child) {
-      margin-left: 12px;
+      margin-left: var(--nav-gap);
     };
 
     &:hover {
-    color: #424242;
-    background-color: #ddd;
+    color: var(--color-nav-hover);
+    /* background-color: var(--color-nav-hover-bg); */
     };
   }
 
@@ -112,8 +115,8 @@
     top: 12px;
     right: 24px;
 
-    border: 1px solid $grey-color-light;
-    border-radius: 5px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
     text-align: right;
 
     .menu-icon {
@@ -125,19 +128,18 @@
       padding-top: 4px;
       text-align: center;
 
-      background: #ffffff url($base-url + '/assets/img/menu.png') 6px 4px no-repeat;
+      background: var(--color-surface-raised) url($base-url + '/assets/img/menu.png') 6px 4px no-repeat;
     }
 
     .menu {
       clear: both;
       display: none;
-      background-color: #ffffff;
+      background-color: var(--color-surface-raised);
       min-width: 10em;
       padding-bottom: 5px;
     }
 
     .page-link {
-      font-size: 16px;
       display: block;
       padding: 6px 16px;
     };
@@ -159,7 +161,7 @@
  * Site footer
  */
 .site-footer {
-  border-top: 1px solid $grey-color;
+  border-top: 1px solid var(--color-border);
   padding-top: calc(#{$spacing-unit} / 2);
   padding-bottom: calc(#{$spacing-unit} / 2);
   text-align: right;
@@ -176,7 +178,7 @@
 .powered-by {
   float: left;
   text-decoration: none;
-  font-size: 14px;
+  font-size: var(--font-size-footer);
   color: $nav-green-color;
   padding-top: 5px;
   font-weight: bold;
@@ -188,11 +190,11 @@
 }
 
 .social-links a i {
-  font-size: 25px; padding: 0px 10px;
+  font-size: var(--font-size-footer-icon); padding: 0px 10px;
   color: $nav-green-color;
 
   &:hover {
-    color: #424242;
+    color: var(--color-nav-hover);
     };
 }
 
@@ -213,7 +215,7 @@
 }
 
 .page-heading {
-  font-size: 20px;
+  font-size: var(--font-size-page-heading);
 }
 
 

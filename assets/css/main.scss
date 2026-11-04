@@ -7,29 +7,150 @@
 // Our variables
 $base-url: "{{ site.baseurl }}";
 
-$base-font-family: Helvetica, Arial, sans-serif, Charter, Georgia ;
-$base-font-size: 15px;
-$small-font-size: $base-font-size * 0.875;
-$base-line-height: 1.7;
+// Sass names for the typography / spacing tokens defined in :root below.
+// Edit the values in :root, not here.
+$base-font-family: var(--font-body);
+$heading-font-family: var(--font-heading);
+$base-font-size: var(--font-size-base);
+$small-font-size: var(--font-size-small);
+$base-line-height: var(--line-height-base);
 
-$spacing-unit: 30px;
+$spacing-unit: var(--space-unit);
 
-$text-color: #111;
-$nav-green-color: #02786e;
-$background-color: #fdfdfd;
-$brand-color: #2a7ae2;
+// -----------------------------------------------------------------------------
+// Design tokens
+//
+// The palette below (deep teal, sage, pale sage, cream, peach, terracotta) is
+// the single source of truth for the site's colour scheme. Every other colour
+// variable is a semantic alias onto a CSS custom property so that switching
+// `.dark-mode` on the <html> element re-themes the whole cascade at once,
+// instead of needing a `.dark-mode .selector { ... }` override per component.
+// -----------------------------------------------------------------------------
+:root {
+  --palette-deep-teal: #276359;
+  --palette-sage: #8EBBA7;
+  --palette-pale-sage: #B9CDCB;
+  --palette-cream: #F2DDCC;
+  --palette-peach: #FCAC89;
+  --palette-terracotta: #E38150;
 
-$main-green-color: #4e9985; 
-$light-green-color: #32a197;
-$dark-green-color: #1b2925;
+  // Light mode (default)
+  --color-bg: #fdfdfd;
+  --color-surface: var(--palette-cream);
+  --color-text: #1b2925;
+  --color-text-muted: #4e4e4e;
+  --color-heading: var(--palette-deep-teal);
+  --color-link: var(--palette-deep-teal);
+  --color-link-hover: var(--palette-terracotta);
+  --color-nav: var(--palette-deep-teal);
+  --color-nav-hover: #424242;
+  --color-nav-hover-bg: #dddddd;
+  --color-secondary: #4f7566;
+  --color-accent: var(--palette-terracotta);
+  --color-accent-soft: var(--palette-peach);
+  --color-border: var(--palette-pale-sage);
+  --color-white: #ffffff;
+  --color-grey: #828282;
+  --color-grey-light: #bfbfbf;
+  --color-subtle: #777;
+  --color-surface-raised: #ffffff;   // mobile menu, pop-ups
+  --color-border-soft: #dddddd;
+  --color-warning-bg: #ff9999;       // draft banner
+  --color-warning-text: #660000;
+  --color-warning-link: #330000;
+  // Circular shadow layer under5 the home profile picture: x  y  blur  spread  colour
+  --shadow-profile: 5px 5px 10px 3px rgba(0, 0, 0, 0.45);
+}
 
-$dark-main-orange-color: #FCAC89;
+// -----------------------------------------------------------------------------
+// Typography, sizing and shape tokens (theme-independent).
+//
+// Change a value here to restyle it site-wide. Sizes that differ on phones are
+// overridden in the media query beneath this block, so components never need
+// their own mobile font-size rules.
+// -----------------------------------------------------------------------------
+:root {
+  // Fonts
+  --font-body: Helvetica, Arial, sans-serif, Charter, Georgia;
+  --font-heading: "Futura", sans-serif;
+  --font-mono: monospace;
 
-$white-color: #FFFFFF;
+  // Text sizes
+  --font-size-base: 15px;
+  --font-size-small: calc(var(--font-size-base) * 0.875);
+  --font-size-xs: 12px;
+  --font-size-tagline: 20px;          // typewriter line under the home title
+  --font-size-page-heading: 20px;     // page titles, home title
+  --font-size-section-heading: 22px;  // work / research section titles
+  --font-size-subheading: 16px;
+  --font-size-site-title: 16px;       // header name
+  --font-size-item-heading: 24px;     // project titles
+  --font-size-post-title: 40px;
+  --font-size-post-subtitle: 26px;
+  --font-size-h2: 32px;               // headings inside post content
+  --font-size-h3: 26px;
+  --font-size-h4: 20px;
+  --line-height-base: 1.7;
 
-$grey-color: #828282;
-$grey-color-light: #bfbfbf;
-$grey-color-dark: darken($grey-color, 25%);
+  // Navigation and footer ("buttons")
+  --font-size-nav: 14px;
+  --nav-gap: 12px;                    // space between nav links
+  --font-size-footer: 14px;
+  --font-size-footer-icon: 18px;
+
+  // Spacing and shape
+  --space-unit: 30px;
+  --radius-xs: 3px;                   // code blocks
+  --radius-sm: 5px;                   // nav links, banners, mobile menu
+
+  // Page frame
+  --page-width: 75%;
+  --page-min-width: 750px;
+  --page-max-width: 1000px;
+}
+
+@media screen and (max-width: 500px) {  // keep in step with $on-mobile
+  :root {
+    --font-size-nav: 16px;
+    --font-size-post-title: 34px;
+    --font-size-post-subtitle: 24px;
+    --font-size-h2: 28px;
+    --font-size-h3: 22px;
+    --font-size-h4: 18px;
+  }
+}
+
+.dark-mode {
+  --color-bg: #1b2925;
+  --color-surface: var(--palette-deep-teal);
+  --color-text: #ffffff;
+  --color-text-muted: #ffffff;
+  --color-heading: var(--palette-peach);
+  --color-link: var(--palette-cream);
+  --color-link-hover: var(--palette-peach);
+  --color-nav: var(--palette-peach);
+  --color-nav-hover: var(--palette-cream);
+  --color-nav-hover-bg: #293127;
+  --color-secondary: var(--palette-sage);
+  --color-accent: var(--palette-terracotta);
+  --color-accent-soft: var(--palette-peach);
+  --color-border: #345048;
+  --shadow-profile: 0 14px 12px -8px rgba(0, 0, 0, 0.8);
+}
+
+$text-color: var(--color-text);
+$nav-green-color: var(--color-nav);
+$background-color: var(--color-bg);
+
+$main-green-color: var(--color-heading);
+$light-green-color: var(--color-link);
+$dark-main-orange-color: var(--color-heading);
+
+$white-color: var(--color-white);
+
+$grey-color: var(--color-grey);
+$grey-color-light: var(--color-grey-light);
+$grey-color-dark: var(--color-text-muted);
 
 $on-mobile: 500px;
 $on-laptop: 800px;
@@ -41,4 +162,4 @@ $on-laptop: 800px;
 }
 
 // Import partials from `sass_dir` (defaults to `_sass`)
-@import "base", "layout", "site", "work", "projects", "blog", "post", "404", "gallery";
+@import "base", "layout", "site", "work", "projects", "blog", "post", "404", "gallery", "design-system";

@@ -1,0 +1,90 @@
+---
+layout: default
+---
+<h2 class="page_heading_title">{{ page.title }}</h2>
+
+<div class="design-system">
+  <div class="ds-intro">
+    {{ content }}
+  </div>
+
+  <section class="ds-section">
+    <h3 class="ds-section-title">Brand Palette</h3>
+    <p class="ds-section-lead">The six colours the whole site's light and dark themes are mixed from.</p>
+
+    <div class="ds-swatch-grid">
+      {% for c in page.palette %}
+        <div class="ds-swatch">
+          <div class="ds-swatch-fill" style="background-color: {{ c.hex }};"></div>
+          <div class="ds-swatch-label">
+            <span class="ds-swatch-name">{{ c.name }}</span>
+            <span class="ds-swatch-hex">{{ c.hex }}</span>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="ds-section">
+    <h3 class="ds-section-title">Semantic Tokens</h3>
+    <p class="ds-section-lead">Palette colours are assigned to CSS custom properties (<code>--color-*</code>) once. Toggling the <i class="fa fa-adjust"></i> icon in the header flips <code>.dark-mode</code> on &lt;html&gt;, which re-points every token below &mdash; and everything that consumes it &mdash; in one step.</p>
+
+    <div class="ds-theme-table">
+      <div class="ds-theme-card ds-theme-card--light">
+        <div class="ds-theme-card-title">Light mode</div>
+        {% for t in page.tokens %}
+          <div class="ds-token-row">
+            <span class="ds-token-swatch" style="background-color: {{ t.light }};"></span>
+            <span class="ds-token-name">{{ t.name }}</span>
+            <span>{{ t.light }}</span>
+          </div>
+        {% endfor %}
+      </div>
+
+      <div class="ds-theme-card ds-theme-card--dark">
+        <div class="ds-theme-card-title">Dark mode</div>
+        {% for t in page.tokens %}
+          <div class="ds-token-row">
+            <span class="ds-token-swatch" style="background-color: {{ t.dark }};"></span>
+            <span class="ds-token-name">{{ t.name }}</span>
+            <span>{{ t.dark }}</span>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="ds-section">
+    <h3 class="ds-section-title">Typography</h3>
+    <p class="ds-section-lead">Headings use <code>--color-heading</code>; body copy uses <code>--color-text</code>; supporting copy uses <code>--color-text-muted</code> / <code>--color-secondary</code>.</p>
+
+    <div class="ds-type-sample"><h1 style="color: var(--color-heading); font-size: 32px;">Heading One <small>h1</small></h1></div>
+    <div class="ds-type-sample"><h2 style="color: var(--color-heading); font-size: 26px;">Heading Two <small>h2</small></h2></div>
+    <div class="ds-type-sample"><h3 style="color: var(--color-heading); font-size: 20px;">Heading Three <small>h3</small></h3></div>
+    <div class="ds-type-sample"><p>Body copy sits in <code>--color-text</code> and stays readable in both themes. <small>p</small></p></div>
+    <div class="ds-type-sample"><p style="color: var(--color-text-muted);">Muted copy for dates, captions and meta information. <small>--color-text-muted</small></p></div>
+    <div class="ds-type-sample"><p style="color: var(--color-secondary);">Secondary copy for sub-headings and supporting labels. <small>--color-secondary</small></p></div>
+  </section>
+
+  <section class="ds-section">
+    <h3 class="ds-section-title">Links &amp; Buttons</h3>
+    <p class="ds-section-lead"><a href="#">This is a default link</a>, hover it to see <code>--color-link-hover</code>.</p>
+
+    <div class="ds-button-row">
+      <a href="#" class="btn btn--primary">Primary button</a>
+      <a href="#" class="btn btn--accent">Accent button</a>
+      <a href="#" class="btn btn--outline">Outline button</a>
+      <span class="badge">Badge</span>
+    </div>
+  </section>
+
+  <section class="ds-section">
+    <h3 class="ds-section-title">Components</h3>
+    <p class="ds-section-lead">A simple card built from <code>--color-bg</code>, <code>--color-border</code> and <code>--color-heading</code>.</p>
+
+    <div class="ds-card">
+      <div class="ds-card-title">Card title</div>
+      <p>Card body copy showing how a contained surface reads against the page background in either theme.</p>
+    </div>
+  </section>
+</div>

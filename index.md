@@ -12,7 +12,7 @@ profile_picture:
 <p> He is currently a senior data scientist at HEOR (a healthcare research consultancy), with extensive experience in overseeing, managing and implementing analytics projects for pharma and healthcare NGO clients. 
 </p>
 
-<p> Previously working as a researcher in <a href="/research" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">cognitive neuroscience</a> at the university, he studied the human cognition and neural mechanisms using a combination of experimental testing, machine learning and brain imaging techniques. </p>
+<p> Previously working as a researcher in <a href="/research" target="_blank" rel="noopener noreferrer" class="link-underline">cognitive neuroscience</a> at the university, he studied the human cognition and neural mechanisms using a combination of experimental testing, machine learning and brain imaging techniques. </p>
 
 <p> Thanks for stopping by. 
 </p>

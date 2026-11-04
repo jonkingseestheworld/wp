@@ -1,0 +1,207 @@
+/**
+ * Design system reference page
+ */
+.design-system {
+  max-width: 800px;
+}
+
+.ds-intro {
+  margin-bottom: $spacing-unit;
+}
+
+.ds-section {
+  margin-bottom: calc(#{$spacing-unit} * 1.5);
+}
+
+.ds-section-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--color-heading);
+  margin: 0 0 5px;
+  padding-top: 20px;
+  border-top: 2px solid var(--color-border);
+}
+
+.ds-section-lead {
+  color: var(--color-text-muted);
+  margin-bottom: calc(#{$spacing-unit} / 2);
+}
+
+/* Colour swatches */
+.ds-swatch-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.ds-swatch {
+  width: 140px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  font-size: 12px;
+}
+
+.ds-swatch-fill {
+  height: 70px;
+}
+
+.ds-swatch-label {
+  padding: 6px 8px;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.ds-swatch-name {
+  display: block;
+  font-weight: bold;
+}
+
+.ds-swatch-hex {
+  display: block;
+  font-family: var(--font-mono);
+  opacity: 0.8;
+}
+
+/* Light / dark theme comparison table */
+.ds-theme-table {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.ds-theme-card {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.ds-theme-card--light {
+  background: #fdfdfd;
+  color: #1b2925;
+}
+
+.ds-theme-card--dark {
+  background: #1b2925;
+  color: #ffffff;
+}
+
+.ds-theme-card-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.ds-token-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+.ds-token-swatch {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  flex: 0 0 auto;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.ds-token-name {
+  font-family: var(--font-mono);
+}
+
+/* Typography */
+.ds-type-sample {
+  margin-bottom: 10px;
+}
+
+.ds-type-sample small {
+  font-family: var(--font-mono);
+  color: var(--color-text-muted);
+  margin-left: 8px;
+}
+
+/* Buttons */
+.ds-button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.btn--primary {
+  background: var(--color-heading);
+  color: var(--color-white);
+
+  &:hover {
+    background: var(--color-accent);
+    color: var(--color-white);
+  }
+}
+
+.btn--accent {
+  background: var(--color-accent);
+  color: var(--color-white);
+
+  &:hover {
+    background: var(--color-accent-soft);
+    color: var(--color-text);
+  }
+}
+
+.btn--outline {
+  background: transparent;
+  border-color: var(--color-heading);
+  color: var(--color-heading);
+
+  &:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+  }
+}
+
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: bold;
+  background: var(--color-surface);
+  color: var(--color-heading);
+}
+
+/* Cards */
+.ds-card {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 16px;
+  background: var(--color-bg);
+}
+
+.ds-card-title {
+  color: var(--color-heading);
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+@include media-query($on-mobile) {
+  .ds-theme-table {
+    grid-template-columns: 1fr;
+  }
+}

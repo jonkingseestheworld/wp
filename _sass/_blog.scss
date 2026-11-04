@@ -9,7 +9,7 @@
     @include media-query($on-mobile) {
       display: block;
       float: none;
-      color: #333;
+      color: $text-color;
       font-size: 11px;
       margin-top: 14px;
     }
@@ -23,15 +23,6 @@
 
 
 .sub-title {
-  font-size: 15px;
-}
-
-
-
-
-.dark-mode .blog-post-list,
-.dark-mode .media-post-list {
-  .blog-post-date {
-    color: #FFFFFF;
-    }
+  font-size: $base-font-size;
+  color: var(--color-secondary);
 }

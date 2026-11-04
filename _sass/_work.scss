@@ -3,7 +3,7 @@ iframe {border: none;}
 
 
 .page-work .page-heading {
-	font-size: 22px; 
+	font-size: var(--font-size-section-heading);
 	font-weight: bold;
 	color: $main-green-color; 
 	margin: 0px 0px 10px;
@@ -11,17 +11,17 @@ iframe {border: none;}
 
 
 .work_title {
-  font-size: 22px; 
+  font-size: var(--font-size-section-heading);
   font-weight: bold;
   color: $main-green-color; 
   margin: 0px 0px 10px;
   padding-top: 20px;
-  border-top: 2px solid $grey-color-light;
+  border-top: 2px solid var(--color-border);
 }
 
 .sub-work-title {
   text-align: left;
-  font-size: 18px; 
+  font-size: var(--font-size-subheading);
   font-weight: bold;
   color: $light-green-color;
   margin-top:5px; 
